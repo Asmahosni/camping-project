@@ -1,0 +1,16 @@
+<section class="exclusive_item_part blog_item_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="section_tittle">
+                    <h2>Popular Camping Centers</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row" >
+            <div *ngFor='let c of centers'>
+                <app-popular-one-center [x]='c'></app-popular-one-center>
+            </div>
+        </div>
+    </div>
+</section>

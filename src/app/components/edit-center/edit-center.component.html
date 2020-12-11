@@ -1,0 +1,82 @@
+
+ <!-- <a  pageScroll href="#addCenter"  mat-raised-button >
+            Basic button
+        </a> -->
+<section>
+    <div class="main-content" id="addCenter">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Edit Center</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <form #editCenterForm='ngForm' (ngSubmit)='editCenter()'>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field class="full-width-field">
+                                            <input matInput placeholder="Center Name" [ngModelOptions]="{standalone: true}" [(ngModel)]='center.name'
+                                                type="text">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <mat-form-field class="full-width-field">
+                                            <input matInput placeholder="Social Media" [ngModelOptions]="{standalone: true}" [(ngModel)]='center.socialMedia'
+                                                type="text">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <mat-form-field class="full-width-field">
+                                            <input matInput placeholder="Email address" [ngModelOptions]="{standalone: true}" [(ngModel)]='center.email'
+                                                type="email">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <mat-form-field class="full-width-field">
+                                            <input matInput placeholder="Phone" [ngModelOptions]="{standalone: true}" [(ngModel)]='center.phone' type="tel">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <mat-form-field class="full-width-field">
+                                            <input matInput placeholder="Rate" [ngModelOptions]="{standalone: true}" [(ngModel)]='center.rate' type="text">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <mat-form-field class="full-width-field">
+                                            <input matInput placeholder="Adress" [ngModelOptions]="{standalone: true}" [(ngModel)]='center.location' type="text">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <mat-form-field class="full-width-field">
+                                            <textarea matInput [ngModelOptions]="{standalone: true}" [(ngModel)]='center.description'
+                                                placeholder="Description"></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <!-- <button type="button" (click)='filePicker.click()' mat-raised-button>Select
+                                    Image</button>
+                                <div class="form-group">
+                                    <input style="visibility: hidden;" type="file" class="form-control" #filePicker
+                                        (change)='onImageSelected($event)' />
+                                </div>
+                                <img [src]="imagePreview"> -->
+                                <button mat-raised-button type="submit" 
+                                    class="btn btn-danger pull-right">Edit
+                                    Center</button>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
