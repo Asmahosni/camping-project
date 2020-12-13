@@ -27,7 +27,17 @@ export class CentersAdminComponent implements OnInit {
       email : [''],
       socialMedia: [''],
       rate : [''],
+      region : [''],
+      facilities : this.getFacilities(),
       image : ['']
+    })
+  }
+  getFacilities():FormGroup{
+    return this.formBuilder.group({
+      Kayak : false,
+      TreeHouses : false ,
+      Materials :false,
+      BreakFast : false
     })
   }
   getAllCenters(){

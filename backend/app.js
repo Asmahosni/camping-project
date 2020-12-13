@@ -23,7 +23,7 @@ app.use('/images', express.static(path.join('backend/images')))
 
 // import objects
 const Center = require('./models/center');
-
+const User = require('./models/user');
 
 // Security configuration
 app.use((req, res, next) => {
@@ -93,6 +93,8 @@ app.post('/addCenter', multer({ storage: storage }).single('image'), (req, res) 
     description: req.body.description,
     email: req.body.email,
     socialMedia: req.body.socialMedia,
+    region: req.body.region,
+    facilities : req.body.facilities,
     rate: req.body.rate,
     image: url + '/images/' + req.file.filename
   });
@@ -159,4 +161,105 @@ app.delete('/deleteCenter/:id', (req, res) => {
 });
 
 
+//user Functions
+//sign up
+app.post('/addUser', multer({ storage: storage }).single('image'), (req, res) => {
+  console.log('Here in adding User');
+  console.log('req;file', req.file);
+  url = req.protocol + '://' + req.get('host');
+  const user = new User({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    phone : req.body.phone,
+    password: req.body.password,
+    image: url + '/images/' + req.file.filename
+  });
+  //stocker dans DB
+  user.save().then(
+    result => {
+      if (result) {
+        res.status(200).json({
+          message: "Added Successfully"
+        });
+      }
+    }
+  );
+});
+//get all users 
+app.get('/allUsers', (req, res) => {
+  console.log('i am here for allusers');
+  User.find((err, docs) => {
+    if (err) {
+      console.log(('Error'), err);
+    } else {
+      res.status(200).json({
+        message: 'here all objects',
+        users: docs
+      });
+    }
+  })
+});
+//delete user
+app.delete('/deleteUser/:id', (req, res) => {
+  console.log('here in delete', req.params.id);
+  //recuperer l'id : req.params.id
+  //delete 
+  User.deleteOne({ _id: req.params.id }).then(
+    result => {
+      if (result) {
+        res.status(200).json({
+          message: 'user Deleted Successfully'
+        });
+      }
+    }
+  )
+});
+//get user by id
+app.get('/getUser/:id', (req, res) => {
+  console.log('Here in get', req.params.id);
+  User.findOne({ _id: req.params.id }).then(
+    data => {
+      if (data) {
+        res.status(200).json({
+          user: data
+        })
+      }
+    }
+  )
+})
+//editUser
+app.put('/editUser/:id', (req, res) => {
+  console.log("here in edit", req.params.id);
+  const newUser = new User({
+    _id: req.body._id,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    phone : req.body.phone,
+    password: req.body.password,
+  });
+  //update takes 2 params : 1st for search object and 2nd to repl
+  User.update({ _id: req.params.id }, newUser).then(
+    result => {
+      if (result) {
+        res.status(200).json({
+          message: 'updated Successfully'
+        })
+      }
+    }
+  );
+});
+//login
+app.post('/login',(req,res) => {
+  console.log('here in logging',req.body);
+  User.find({email : req.body.email, password : req.body.password}).then(
+    data  => {
+    if (data) {
+      res.status(200).json({
+        user : data 
+      })
+    }
+  })
+});
 module.exports = app;

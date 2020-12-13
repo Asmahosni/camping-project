@@ -1,0 +1,71 @@
+
+ <!-- <a  pageScroll href="#addCenter"  mat-raised-button >
+            Basic button
+        </a> -->
+        <section>
+            <div class="main-content" id="addCenter">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-header card-header-danger">
+                                <h4 class="card-title">Edit User</h4>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <form #editUserForm='ngForm' (ngSubmit)='editUser()'>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <mat-form-field class="full-width-field">
+                                                    <input matInput placeholder="First Name" [ngModelOptions]="{standalone: true}" [(ngModel)]='user.firstName'
+                                                        type="text">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <mat-form-field class="full-width-field">
+                                                    <input matInput placeholder="Last Name" [ngModelOptions]="{standalone: true}" [(ngModel)]='user.lastName'
+                                                        type="text">
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <mat-form-field class="full-width-field">
+                                                    <input matInput placeholder="Phone" [ngModelOptions]="{standalone: true}" [(ngModel)]='user.phone'
+                                                        type="tel">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <mat-form-field class="full-width-field">
+                                                    <input matInput placeholder="Email" [ngModelOptions]="{standalone: true}" [(ngModel)]='user.email'
+                                                        type="email">
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <mat-form-field class="full-width-field">
+                                                    <input matInput placeholder="Password" [ngModelOptions]="{standalone: true}" [(ngModel)]='user.password' type="password">
+                                                </mat-form-field>
+                                            </div>
+                                            
+                                        </div>
+                                       
+                                        
+                                        <!-- <button type="button" (click)='filePicker.click()' mat-raised-button>Select
+                                            Image</button>
+                                        <div class="form-group">
+                                            <input style="visibility: hidden;" type="file" class="form-control" #filePicker
+                                                (change)='onImageSelected($event)' />
+                                        </div>
+                                        <img [src]="imagePreview"> -->
+                                        <button mat-raised-button type="submit" 
+                                            class="btn btn-danger pull-right">Edit
+                                            User</button>
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </section>

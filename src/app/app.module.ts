@@ -27,6 +27,17 @@ import { CentersAdminComponent } from './components/centers-admin/centers-admin.
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { EditCenterComponent } from './components/edit-center/edit-center.component';
 import { SingleCenterComponent } from './components/single-center/single-center.component';
+import { CenterComponent } from './components/center/center.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
+import { UsersAdminComponent } from './components/users-admin/users-admin.component';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { WlcHomeComponent } from './components/wlc-home/wlc-home.component';
+import { VideoHomeComponent } from './components/video-home/video-home.component';
+import { ReservationComponent } from './components/reservation/reservation.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { BeginnerComponent } from './components/beginner/beginner.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -47,7 +58,18 @@ import { SingleCenterComponent } from './components/single-center/single-center.
     SidebarComponent,
     CentersAdminComponent,
     EditCenterComponent,
-    SingleCenterComponent
+    SingleCenterComponent,
+    CenterComponent,
+    SignupComponent,
+    LoginComponent,
+    UsersAdminComponent,
+    EditUserComponent,
+    WlcHomeComponent,
+    VideoHomeComponent,
+    ReservationComponent,
+    TestimonialsComponent,
+    BeginnerComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

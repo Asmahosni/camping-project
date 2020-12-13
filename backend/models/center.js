@@ -3,12 +3,13 @@ const mongoose = require('mongoose');
 const centerSchema = mongoose.Schema({
     name: String,
     location: String,
-    // facilities : Array,
+    facilities : Array,
     description : String,
     phone : Number,
     socialMedia : String,
     email : String,
     image : String,
+    region : String,
     rate :  String
 });
 //DB Model name :stadium

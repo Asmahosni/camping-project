@@ -19,6 +19,8 @@ export class CenterService {
     formData.append('phone', center.phone);
     formData.append('rate', center.rate);
     formData.append('socialMedia', center.socialMedia);
+    formData.append('region', center.region);
+    formData.append('facilities', center.facilities);
     formData.append('image', image);
     return this.httpClient.post(`${this.centerUrl}/addCenter`,formData)
   };

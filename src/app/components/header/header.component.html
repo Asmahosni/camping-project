@@ -1,11 +1,11 @@
-<div *ngIf='user == "user"'>
-    <header class="main_menu home_menu">
-        <div class="container">
+<div class="container" *ngIf='userRole == "simpleUser"'>
+    <header class="main_menu home_menu ">
+        <div >
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                       <a class="navbar-brand" routerLink ="">
-                              <img src="assets/img/logo_size.jpg" alt="logo"> </a>
+                       <a class="ml-5" routerLink ="">
+                              <img src="assets/img/final.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -19,32 +19,27 @@
                                     <a class="nav-link" routerLink="">Home</a>
                                 </li>
                                 <li class="nav-item" [routerLinkActive]="['active']">
-                                    <a class="nav-link" routerLink="#">About</a>
+                                    <a class="nav-link" routerLink="beginner">Beginners</a>
                                 </li>
-                                <li  [routerLinkActive]="['active']">
+                                <li class="nav-item" [routerLinkActive]="['active']">
                                     <a class="nav-link" routerLink='centers'>Centers</a>
                                 </li>
                                 <li class="nav-item" [routerLinkActive]="['active']">
-                                    <a class="nav-link" routerLink="">Chefs</a>
+                                    <a class="nav-link" routerLink=""></a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="blog.html">Blog</a>
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                        <a class="dropdown-item" href="elements.html">Elements</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                <li class="nav-item" [routerLinkActive]="['active']">
+                                    <a class="nav-link" routerLink="contact">Contact</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="menu_btn">
-                            <a href="#" class="btn_1 d-none d-sm-block">book a tabel</a>
+                            <a routerLink="signup" class="btn_1 d-none d-sm-block">Sign Up</a>
                         </div>
+                        <div class="menu_btn">
+                            <a routerLink="login" class="btn_1 d-none d-sm-block">Log In</a>
+                        </div>
+                       
+
                     </nav>
                 </div>
             </div>

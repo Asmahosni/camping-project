@@ -1,0 +1,72 @@
+<app-page-name></app-page-name>
+<section>
+    <div class="main-content" id="addCenter">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="row col-8 ">
+                <div class="card">
+                    <div class="card-header card-header-danger text-center">
+                        <h4 class="card-title">Sign Up</h4>
+                    </div>
+                        <div class="card-body">
+                            <form [formGroup]='signupForm'>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <mat-form-field class="full-width-field">
+                                                <input matInput placeholder="First Name" formControlName='firstName'
+                                                    type="text">
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <mat-form-field class="full-width-field">
+                                                <input matInput placeholder="Last Name" formControlName='lastName'
+                                                    type="text">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <mat-form-field class="full-width-field">
+                                                <input matInput placeholder="Phone" formControlName='phone' type="tel">
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <mat-form-field class="full-width-field">
+                                                <input matInput placeholder="Email address" formControlName='email'
+                                                    type="email">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <mat-form-field class="full-width-field">
+                                                <input matInput placeholder="Password" formControlName='password' type="password">
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <mat-form-field class="full-width-field">
+                                                <input matInput placeholder="Confirm Your Password" formControlName='cPassword' type="password">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <button type="button" (click)='filePicker.click()' mat-raised-button
+                                        class="btn btn-danger pull-left">Select
+                                        Image</button>
+                                    <div class="form-group">
+                                        <input style="visibility: hidden;" type="file" class="form-control" #filePicker
+                                            (change)='onImageSelected($event)' />
+                                    </div>
+                                    <img [src]="imagePreview">
+                                </div>
+                                <div class="row justify-content-center">
+                                    <button mat-raised-button type="submit" (click)='signup(signupForm.value)'
+                                    class="btn btn-danger ">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

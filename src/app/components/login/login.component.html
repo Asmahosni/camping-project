@@ -1,0 +1,37 @@
+<app-page-name></app-page-name>
+<section>
+    <div class="main-content" id="addCenter">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="row col-7 ">
+                <div class="card">
+                    <div class="card-header card-header-danger text-center">
+                        <h4 class="card-title">Log In</h4>
+                    </div>
+                        <div class="card-body">
+                            <form [formGroup]='loginForm'>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                            <mat-form-field class="full-width-field">
+                                                <input matInput placeholder="Email address" formControlName='email'
+                                                    type="email">
+                                            </mat-form-field>
+                                    </div>
+                                    <div class="row">
+                                            <mat-form-field class="full-width-field">
+                                                <input matInput placeholder="Password" formControlName='password' type="password">
+                                            </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="row justify-content-center">
+                                    <button mat-raised-button type="submit" (click)='login(loginForm.value)'
+                                    class="btn btn-danger ">Log In</button>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

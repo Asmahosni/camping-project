@@ -2307,8 +2307,8 @@ ul {
   position: fixed;
   z-index: 9999 !important;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+  /* background-color: #fff; */
+  /* box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); */
   top: 0;
 }
 
@@ -2503,10 +2503,10 @@ ul {
 .banner_part {
   height: 880px;
   position: relative;
-  background-image: url(../img/banner_bg.png);
+  background-image: url(../img/5766.png);
   background-repeat: no-repeat;
-  background-size: 41%;
-  background-position: top right;
+  background-size: 60%;
+  background-position:  right;
 }
 
 @media (max-width: 576px) {
@@ -2546,13 +2546,13 @@ ul {
 
 /* line 28, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_banner.scss */
 .banner_part:after {
-  width: 100%;
-  height: 100%;
+  width:30%;
+  height: 30%;
   position: absolute;
   content: "";
   bottom: -50px;
   z-index: -1;
-  background: url(../img/banner_overlay.png) bottom right no-repeat;
+  background: url(../img/7488.png) bottom right no-repeat;
   right: 19%;
 }
 
@@ -2843,7 +2843,6 @@ ul {
   content: "";
   bottom: -250px;
   z-index: -1;
-  background: url(../img/about_overlay.png) bottom right no-repeat;
   background-size: 15% 65%;
   right: 0px;
 }
@@ -3022,7 +3021,7 @@ ul {
   content: "";
   bottom: 133px;
   z-index: -1;
-  background: url(../img/about_overlay.png) bottom right no-repeat;
+  background: url() bottom right no-repeat;
   background-size: 15% 60%;
   right: 0px;
 }
@@ -6927,7 +6926,7 @@ h6 {
 
 /* line 1, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_breadcrumb.scss */
 .breadcrumb_bg {
-  background-image: url("../img/breadcrumb.png");
+  background-image: url("../img/contact1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6955,7 +6954,7 @@ h6 {
 
 /* line 19, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_breadcrumb.scss */
 .breadcrumb .breadcrumb_iner {
-  height: 300px;
+  height: 600px;
   width: 100%;
   display: table;
 }
@@ -6969,7 +6968,7 @@ h6 {
 /* line 26, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_breadcrumb.scss */
 .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
   color: #fff;
-  font-size: 45px;
+  font-size: 70px;
   font-weight: 600;
   margin-bottom: 10px;
   text-transform: capitalize;

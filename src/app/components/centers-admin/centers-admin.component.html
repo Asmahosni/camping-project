@@ -30,6 +30,9 @@
                                         Adress
                                     </th>
                                     <th>
+                                        Region
+                                    </th>
+                                    <th>
                                         Social Media
                                     </th>
                                     <th>
@@ -64,6 +67,9 @@
                                         </td>
                                         <td>
                                             {{c.location}}
+                                        </td>
+                                        <td>
+                                            {{c.region}}
                                         </td>
                                         <td>
                                             {{c.socialMedia}}
@@ -145,9 +151,20 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <mat-form-field class="full-width-field">
                                                 <input matInput placeholder="Adress" formControlName='location' type="text">
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <mat-form-field class="full-width-field" appearance="fill">
+                                                <mat-label>Region</mat-label>
+                                                <mat-select formControlName ="region" >
+                                                    <mat-option value="nouthern">Northern Region</mat-option>
+                                                    <mat-option value="center">Center Region</mat-option>
+                                                    <mat-option value="capBon">Cap Bon</mat-option>
+                                                    <mat-option value="southern">Southern Region</mat-option>
+                                                  </mat-select>
                                             </mat-form-field>
                                         </div>
                                     </div>
@@ -159,6 +176,11 @@
                                             </mat-form-field>
                                         </div>
                                     </div>
+                                    <!-- <div class="row">
+                                            <mat-form-field class="full-width-field" >
+                                                <mat-checkbox formControlName='Kayak'>Kayak</mat-checkbox>
+                                            </mat-form-field>
+                                    </div> -->
                                     <button type="button" (click)='filePicker.click()' mat-raised-button
                                         class="btn btn-danger pull-left">Select
                                         Image</button>
